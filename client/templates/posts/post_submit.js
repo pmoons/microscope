@@ -17,9 +17,7 @@ Template.postSubmit.events({
 			if (result.postExists)
 				alert('This link has already been posted');
 
-			
+			Router.go('postsList');
 		});
-
-		Router.go('postsList');
 	}
 });
