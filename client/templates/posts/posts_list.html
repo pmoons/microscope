@@ -8,6 +8,10 @@
 		<a class="load-more" href="{{nextPath}}">
 			Load more
 		</a>
+		{{else}}
+			{{#unless ready}}
+				{{> spinner}}
+			{{/unless}}
 		{{/if}}
 	</div>
 </template>
