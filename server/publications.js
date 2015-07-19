@@ -1,4 +1,8 @@
-Meteor.publish('posts', function() {
+Meteor.publish('posts', function(options) {
+	check(options, {
+		sort: Object,
+		limit: Number
+	});
 	return Posts.find();
 });
 
@@ -9,7 +13,6 @@ Meteor.publish('comments', function(postId) {
 
 Meteor.publish('notifications', function() {
 	return Notifications.find({
-		userId: this.userId,
-		read: false
+		userId: this.userId
 	});
 });
