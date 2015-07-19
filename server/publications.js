@@ -9,7 +9,7 @@ Meteor.publish('comments', function(postId) {
 
 Meteor.publish('notifications', function() {
 	return Notifications.find({
-		userId: this.userIdm
+		userId: this.userId,
 		read: false
 	});
 });
